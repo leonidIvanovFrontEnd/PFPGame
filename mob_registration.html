@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFP</title>
+    <link rel="stylesheet" href="./app/css/app.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header is-authorized">
+            <div class="container">
+                <div class="header__burger js-burgerBtn"></div>
+
+                <a href="/" class="header__logo_sm"></a>
+                <div class="header__bank">
+                    <picture>
+                      <source srcset="./app/img/header__case.webp" type="image/webp">
+                      <source srcset="./app/img/header__case.png" type="image/jpeg">
+                      <img src="./app/img/header__case.png" alt="">
+                    </picture>
+                    <div class="header__bank-wrapper">
+                        <p>Общий банк</p>
+                        <p class="header__bank-value"><span>2 500 0000</span>pfp<br>Gold</p>
+                    </div>
+                </div>            
+                <div class="header__jackpot">
+                    <p><span>120 000</span>PFP<br>GOLD</p>
+                    <picture>
+                      <source srcset="./app/img/header__jackpo.webp" type="image/webp">
+                      <source srcset="./app/img/header__jackpo.png" type="image/jpeg">
+                      <img src="./app/img/header__jackpo.png" alt="">
+                    </picture>
+                </div>
+                <a href="/" class="header__logo"></a>
+                <a href="#" class="header__about">
+                    <picture>
+                        <source srcset="./app/img/header_how_work_sm.webp" type="image/webp" media="(max-width: 480px)">
+                      <source srcset="./app/img/header_how_work_sm.png" type="image/jpeg" media="(max-width: 480px)">
+                        <source srcset="./app/img/header_how_work_md.webp" type="image/webp" media="(max-width: 949px)">
+                      <source srcset="./app/img/header_how_work_md.png" type="image/jpeg" media="(max-width: 949px)">
+                      <source srcset="./app/img/header_how_work.webp" type="image/webp">
+                      <source srcset="./app/img/header_how_work.png" type="image/jpeg">
+                      <img src="./app/img/header_how_work.png" alt="">
+                    </picture>
+                </a>
+                <div class="header__auth">
+                    <button class="button_gold header__button header__button_enter" data-open="authorization">Вход</button>
+                    <button class="button_gold header__button header__button_registration" data-open="registration">Регистрация</button>
+                    <div class="header-profile js-authMenuOpen">
+                        <div class="header-profile__inner">
+                            <div class="header-profile__name">
+                                UserName001
+                            </div>
+                            <div class="header-profile__info">
+                                <div class="header-profile__item bronze">
+                                    <div class="header-profile__count">
+                                        800 000
+                                    </div>
+                                    PFP BRONZE COINS
+                                </div>
+                                <div class="header-profile__item silver">
+                                    <div class="header-profile__count">
+                                        240 000
+                                    </div>
+                                    PFP SILVER COINS
+                                </div>
+                                <div class="header-profile__item gold">
+                                    <div class="header-profile__count">
+                                        120 000
+                                    </div>
+                                    PFP GOLD COINS
+                                </div>
+                            </div>
+                        </div>
+                        <picture>
+                            <source srcset="./app/img/avatar.webp" type="image/webp">
+                            <source srcset="./app/img/avatar.png" type="image/jpeg">
+                            <img src="./app/img/avatar.png" alt="" class="header-profile__avatar">
+                        </picture>
+                    </div> 
+                </div>
+                <div class="header__auth_mobile js-authMobile" data-open="authorization">
+                    <picture>
+                        <source srcset="./app/img/avatar.webp" type="image/webp">
+                        <source srcset="./app/img/avatar.png" type="image/jpeg">
+                        <img src="./app/img/avatar.png" alt="" class="js-authMenuOpen">
+                    </picture>
+                </div>
+            </div>
+        </header>
+       
+        <section class="mob-modal">
+            <div class="container">
+                <div class="mob-modal__head">
+                    <h1 class="mob-modal__title">
+                        Регистрация
+                    </h1>
+                </div>
+                <div class="mob-modal__body">
+                    <form action="#" class="modal__form">
+                        <label class="modal__label">
+                            Введите Ваш E-mail :
+                            <input type="text" class="modal__input">
+                        </label>
+                        <label class="modal__label">
+                            Никнейм :
+                            <input type="text" class="modal__input">
+                        </label>
+                        <label class="modal__label">
+                            Пароль :
+                            <input type="password" class="modal__input">
+                        </label>
+                        <label class="modal__label">
+                            Повтор пароля :
+                            <input type="password" class="modal__input">
+                        </label>
+                        <label class="modal__label modal__label_top-indent">
+                            Введите число с картинки :
+                            <span class="modal__inner">
+                                <input type="text" class="modal__input modal__input_sm">
+                                <img src="./app/img/numbers.png" alt="" class="modal__num">
+                                <a href="#" class="modal__reload"></a>
+                            </span>
+                        </label>
+                        <label class="modal__label custom-input modal__label_top-indent-no-bottom">
+                            <input type="checkbox">
+                            <span class="custom-input__item"></span>
+                            <span>Согласен с <a href="#" class="modal__link" target="_blanck">условиями сервиса</a></span>
+                        </label>
+                        <button class="button_gold modal__submit">
+                            Зарегистрироваться
+                        </button>
+                    </form>
+                    <p class="modal__lettering">или войдите через социальные сети</p>
+
+                    <div class="modal__social">
+                        <div class="modal__social-item vk"></div>
+                        <div class="modal__social-item fb"></div>
+                        <div class="modal__social-item twitter"></div>
+                        <div class="modal__social-item ok"></div>
+                    </div>
+
+                    <div class="modal__block">
+                        у меня уже есть аккаунт, я хочу <a href="#" class="modal__link" data-close data-open="authorization">авторизоваться</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__left">
+                    <a href="/">
+                        <picture>
+                            <source srcset="./app/img/footer_logo_lg.webp" type="image/webp">
+                            <source srcset="./app/img/footer_logo_lg.png" type="image/jpeg"> 
+                            <img src="./app/img/footer_logo.png" class="footer__logo" alt="">
+                        </picture>
+                    </a>
+                    <p class="footer__text">
+                        Игровой центр — небольшая, но удобная программа, которая поможет тебе быстро и безопасно скачать и установить игры, узнать последние новости и поделиться с друзьями своими находками и достижениями. Технологии, пришедшие из torrent&#8209;клиентов, обеспечат максимальную скорость, а при обрыве связи докачка продолжится автоматически!
+
+                        <span>
+                            Установи Игровой центр и скачивай лучшие клиентские игры!
+                        </span>
+                    </p>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__block js-footerItem">
+                        <h3 class="footer__title">
+                            PFP Games <span></span>
+                        </h3>
+                        <ul class="footer__list"> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Все об играх
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Фичеры
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Новости
+                                </a>
+                            </li>
+                           <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Секреты
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Рецензии
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Железо и софт
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Превью
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Видео
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__block js-footerItem">
+                        <h3 class="footer__title">
+                            Настольные игры <span></span>
+                        </h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Нарды длинные
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Домино
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Нарды короткие
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Эрудит
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Шахматы 
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Балда
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Шашки
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Турниры
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__block js-footerItem">
+                        <h3 class="footer__title">
+                            Карточные игры <span></span>
+                        </h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Дурак подкидной
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Тысяча
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Дурак переводной
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Червы
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Дурак шуба
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Преферанс
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Буркозел
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Марьяж
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Буркозел
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Джин Рамми
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    6ти карточный
+                                </a>
+                            </li> 
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    Топ Турниры
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__block_social">
+                        <h3 class="footer__title">
+                            Мы в социальных сетях
+                        </h3>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-item vk"></a>
+                            <a href="#" class="footer__social-item fb"></a>
+                            <a href="#" class="footer__social-item youtube"></a>
+                            <a href="#" class="footer__social-item inst"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="footer__credits">
+                        &copy; 2018. PFP Games
+                    </div>
+                    <ul class="footer__list_row">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Редакция
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Соглашение
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Реклама на сайтe
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Поддержка 
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Техническая поддержка  
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Modals -->
+        <div class="modal" data-modal="registration">
+            <div class="modal__overlay registration" data-close>
+                <div class="modal__content">
+                    <div class="modal__close" data-close></div>
+                    <h2 class="modal__title">
+                        Регистрация
+                    </h2>
+                    <form action="#" class="modal__form">
+                        <label class="modal__label">
+                            Введите Ваш E-mail :
+                            <input type="text" class="modal__input">
+                        </label>
+                        <label class="modal__label">
+                            Никнейм :
+                            <input type="text" class="modal__input">
+                        </label>
+                        <label class="modal__label">
+                            Пароль :
+                            <input type="password" class="modal__input">
+                        </label>
+                        <label class="modal__label">
+                            Повтор пароля :
+                            <input type="password" class="modal__input">
+                        </label>
+                        <label class="modal__label modal__label_top-indent">
+                            Введите число с картинки :
+                            <span class="modal__inner">
+                                <input type="text" class="modal__input modal__input_sm">
+                                <img src="./app/img/numbers.png" alt="" class="modal__num">
+                                <a href="#" class="modal__reload"></a>
+                            </span>
+                        </label>
+                        <label class="modal__label custom-input modal__label_top-indent-no-bottom">
+                            <input type="checkbox">
+                            <span class="custom-input__item"></span>
+                            <span>Согласен с <a href="#" class="modal__link" target="blanck">условиями сервиса</a></span>
+                        </label>
+                        <button class="button_gold modal__submit">
+                            Зарегистрироваться
+                        </button>
+                    </form>
+                    <p class="modal__lettering">или войдите через социальные сети</p>
+
+                    <div class="modal__social">
+                        <div class="modal__social-item vk"></div>
+                        <div class="modal__social-item fb"></div>
+                        <div class="modal__social-item twitter"></div>
+                        <div class="modal__social-item ok"></div>
+                    </div>
+
+                    <div class="modal__block">
+                        у меня уже есть аккаунт, я хочу <a href="#" class="modal__link" data-close data-open="authorization">авторизоваться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" data-modal="authorization">
+            <div class="modal__overlay registration" data-close>
+                <div class="modal__content">
+                    <div class="modal__close" data-close></div>
+                    <h2 class="modal__title">
+                        Авторизация
+                    </h2>
+                    <form action="#" class="modal__form">
+                        <label class="modal__label">
+                            Введите Ваш E-mail :
+                            <input type="text" class="modal__input">
+                        </label>
+                        <label class="modal__label">
+                            Пароль :
+                            <input type="password" class="modal__input">
+                        </label>
+                        <div class="modal__wrapper">
+                            <label class="modal__label custom-input">
+                                <input type="checkbox">
+                                <span class="custom-input__item"></span>
+                                <span>Запомнить меня</span>
+                            </label>
+                            <a href="#" class="modal__link">
+                                Забыли пароль ?
+                            </a>
+                        </div>  
+                        <button class="button_gold modal__submit">
+                            Войти
+                        </button>
+                    </form>
+                    <p class="modal__lettering">или войдите через социальные сети</p>
+
+                    <div class="modal__social">
+                        <div class="modal__social-item vk"></div>
+                        <div class="modal__social-item fb"></div>
+                        <div class="modal__social-item twitter"></div>
+                        <div class="modal__social-item ok"></div>
+                    </div>
+
+                    <div class="modal__block">
+                        у меня нет аккаунта, я хочу <a href="#" class="modal__link" data-close data-open="registration">зарегистрироваться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger js-burgerMenu">          
+            <div class="sidebar sidebar-menu">
+                 <ul class="sidebar__list">
+                     <li>
+                     <a href="#">                     
+                         <picture>
+                         <source srcset="./app/img/sidebarbtn1.webp" type="image/webp">
+                         <source srcset="./app/img/sidebarbtn1.png" type="image/jpeg">
+                         <img src="./app/img/sidebarbtn1.png" alt="Карточные игры">
+                         </picture>                   
+                         <p>Карточные игры</p>
+                     </a>
+                     </li>
+                     <li>
+                     <a href="#">
+                         <picture>
+                             <source srcset="./app/img/sidebarbtn2.webp" type="image/webp">
+                             <source srcset="./app/img/sidebarbtn2.png" type="image/jpeg">
+                             <img src="./app/img/sidebarbtn2.png" alt="Настольные игры">  
+                         </picture>                                       
+                         <p>Настольные игры</p>
+                     </a>
+                     </li>
+                     <li>
+                     <a href="#">       
+                         <picture>
+                             <source srcset="./app/img/sidebarbtn3.webp" type="image/webp">
+                             <source srcset="./app/img/sidebarbtn3.png" type="image/jpeg">
+                             <img src="./app/img/sidebarbtn3.png" alt="Турниры">  
+                         </picture>         
+                         <p>Турниры</p>
+                     </a>
+                     </li>
+                     <li>
+                     <a href="#">                
+                         <picture>
+                             <source srcset="./app/img/sidebarbtn4.webp" type="image/webp">
+                             <source srcset="./app/img/sidebarbtn4.png" type="image/jpeg">
+                             <img src="app/img/sidebarbtn4.png" alt="Магазин PFP">  
+                         </picture>                     
+                         <p>Магазин PFP</p>
+                     </a>
+                     </li>
+                     <li>
+                     <a href="#">                     
+                         <picture>
+                             <source srcset="./app/img/sidebarbtn5.webp" type="image/webp">
+                             <source srcset="./app/img/sidebarbtn5.png" type="image/jpeg">
+                             <img src="./app/img/sidebarbtn5.png" alt="Lucky Ticket">  
+                         </picture>                    
+                         <p>Lucky Ticket</p>
+                     </a>
+                     </li>
+                     <li>
+                     <a href="#">                                         
+                         <picture>
+                             <source srcset="./app/img/sidebarbtn6.webp" type="image/webp">
+                             <source srcset="./app/img/sidebarbtn6.png" type="image/jpeg">
+                             <img src="./app/img/sidebarbtn6.png" alt="Рейтинг игроков">  
+                         </picture>                   
+                         <p>Рейтинг игроков</p>
+                     </a>
+                     </li>
+                 </ul>            
+             </div>                     
+         </div>
+        <div class="auth js-authMenu">
+            <div class="container">
+                <div class="auth__content">
+                    <div class="auth__info">
+                        <div class="auth__name">
+                            UserName001
+                        </div>
+                        <div class="auth__email">
+                            MyMailBoxUserName001@gmail.com
+                        </div>
+                        <div class="auth__title">
+                            БАЛАНС
+                        </div>
+                        <div class="auth__balance">
+                            <div class="auth__item">
+                                <div class="auth__count gold">
+                                    120 000
+                                </div>
+                                PFP GOLD <br> COINS
+                            </div>
+                            <div class="auth__item">
+                                <div class="auth__count silver">
+                                    240 000
+                                </div>
+                                PFP SILVER <br> COINS
+                            </div>
+                            <div class="auth__item">
+                                <div class="auth__count bronze">
+                                    800 000
+                                </div>
+                                PFP BRONZE <br> COINS
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="auth__wrapper">
+                        <div class="auth__menu">
+                            <a href="#" class="auth__link">
+                                Личные данные
+                            </a>
+                            <a href="#" class="auth__link">
+                                История PFP Coin
+                            </a>
+                            <a href="#" class="auth__link">
+                                Избранные игры 
+                            </a>
+                            <a href="#" class="auth__link">
+                                Конвертация монет
+                            </a>
+                        </div>
+                        <button class="auth__button">
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app/js/app.js"></script>
+</body>
+</html>
